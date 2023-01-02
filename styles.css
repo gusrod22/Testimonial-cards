@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+h3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.main-layout {
+  /* width: 20rem; */
+  margin: 5rem 0;
+}
+.card {
+  font-family: "barlow semi condensed", sans-serif;
+  font-size: 0.82rem;
+  border-radius: 10px;
+  margin: 0 2rem 1.7rem 2rem;
+  /* margin-bottom: 1.7rem;
+  margin: 0 2rem; */
+}
+.main-content {
+  padding: 1.8rem;
+}
+.main-content > * {
+  margin-bottom: 1rem;
+}
+.dan,
+.jon,
+.pat {
+  color: white;
+}
+.dan {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 88% top;
+}
+.jon {
+  background-color: hsl(217, 19%, 35%);
+}
+.jean {
+  background-color: white;
+}
+.pat {
+  background-color: hsl(219, 29%, 14%);
+}
+.kira {
+  background-color: white;
+}
+.avatar-user {
+  display: flex;
+}
+.avatar {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+.user-name {
+  margin-left: 1rem;
+}
+.verified-color {
+  color: hsl(0, 0%, 50%);
+}
+.main-point {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.point-ext {
+  color: hsl(0, 0%, 70%);
+}
+
+@media screen and (min-width: 81.25rem) {
+  body {
+    align-items: center;
+  }
+  .main-layout {
+    width: 80rem;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, .5fr);
+    grid-template-areas:
+      "dan dan jon kira"
+      "jean pat pat kira";
+      grid-row-gap: 1.5rem;
+      grid-column-gap: 1.5rem
+  }
+  .card {
+    margin-bottom: 0;
+    margin: 0;
+  }
+  .dan {
+    grid-area: dan;
+    background-position: 85% top;
+  }
+  .jon {
+    grid-area: jon;
+  }
+  .kira {
+    grid-area: kira;
+  }
+  .jean {
+    grid-area: jean;
+  }
+  .pat {
+    grid-area: pat;
+  }
+}
